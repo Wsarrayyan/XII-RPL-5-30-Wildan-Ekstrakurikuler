@@ -5,7 +5,7 @@ const usercontroller = require('../controllers/users')
 //endpoint, function, perintah
 router.get('/users', usercontroller.index)
 
-router.get('/users/:id', usercontroller.show)
+router.get('/user/:id', usercontroller.show)
 
   router.post('/user', usercontroller.store)
 

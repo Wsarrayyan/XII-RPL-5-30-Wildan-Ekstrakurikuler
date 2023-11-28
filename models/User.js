@@ -7,11 +7,31 @@ const UserSchema = new mongoose.Schema({
         unique: true
     },
 
-    email: {
+    guru: {
         type: String,
-        unique: true,
-        match: [ /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Silakan isi email valid']
-    }
+        requirred: [true, 'Silahkan isi nama'],
+        unique: true
+    },
+
+    ruang: {
+        type: String,
+        requirred: [true, 'Silahkan isi nama'],
+        unique: true
+    },
+
+    hari: {
+        type: String,
+        requirred: [true, 'Silahkan isi nama'],
+        unique: true
+    },
+
+    jumlah_siswa: {
+        type: String,
+        requirred: [true, 'Silahkan isi nama'],
+        unique: true
+    },
+
+    
 })
 
 module.exports  = mongoose.model('user', UserSchema)
